@@ -1,0 +1,15 @@
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/bin/Debug/net10.0/ex01
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/bin/Debug/net10.0/ex01.deps.json
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/bin/Debug/net10.0/ex01.runtimeconfig.json
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/bin/Debug/net10.0/ex01.dll
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/bin/Debug/net10.0/ex01.pdb
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.AssemblyInfoInputs.cache
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.AssemblyInfo.cs
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.csproj.CoreCompileInputs.cache
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.sourcelink.json
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.dll
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/refint/ex01.dll
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.pdb
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ex01.genruntimeconfig.cache
+/workspaces/Poo_2026_2_Guilherme_Silva/lista_01/ex01/obj/Debug/net10.0/ref/ex01.dll
