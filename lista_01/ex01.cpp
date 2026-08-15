@@ -10,4 +10,5 @@ int main() {
     return 0;
 }
 
-//javac lista_01_java
+// para compilar: g++ ex01.cpp -o ex01
+// executar: ./ex01
