@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ex01 {
     
-    public static voidmain(String[] args){
+    public static void main(String[] args){
         Scanner entrada = new Scanner(system.in);
 
         system.out.print("digite seu nome: ");
@@ -13,3 +13,6 @@ public class ex01 {
         entrada.close();
     }
 }
+
+// javac ex01.java
+// java ex01
