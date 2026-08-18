@@ -1,39 +1,36 @@
 mês = int(input())
 if mês== 1:
-    mês = 'janeiro'
+    print('O mês de janeiro é do primeiro trimestre do ano')
 
 if mês == 2:
-    mês= 'fevereiro'
+    print('O mês de fevereito é do primeiro trimestre do ano')
 
 if mês == 3: 
-    mês= 'março'
+    print('O mês de março é do primeiro trimestre do ano')
 
 if mês == 4: 
-    mês= 'maio'
+    print('O mês de maio é do segundo trimestre do ano')
 
 if mês == 5: 
-    mês= 'abril'
+    print('O mês de abril é do segundo trimestre do ano')
 
 if mês == 6: 
-    mês= 'junho'
+    print('O mês de junho é do segundo trimestre do ano')
 
 if mês == 7:
-    mês= 'julho'
+    print('O mês de julho é do terceiro trimestre do ano')
 
 if mês == 8: 
-    mês= 'agosto'
+    print('O mês de agosto é do terceiro trimestre do ano')
 
 if mês == 9:
-    mês= 'setembro'
+    print('O mês de setembro é do terceiro trimestre do ano')
 
 if mês == 10:
-    mês='outubro'
+    print('O mês de outubro é do quarto trimestre do ano')
 
 if mês == 11: 
-    mês= 'novembro'
+    print('O mês de novembro é do quarto trimestre do ano')
 
 if mês == 12:
-    mês= 'dezembro'
-
-print ('estamos no mês de',mês)
-
+    print('O mês de dezembro é do quarto trimestre do ano')
