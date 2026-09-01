@@ -1,0 +1,94 @@
+Conceitos iniciais de POO
+1. Classificação: reunião de grupos objetos com caracter´sticas semelhantes. Geram classes.
+
+2. Entidades: coisas do mundo real que precisam ser representadas por um software.
+    ->Em uma modelagem se identificam as entidades, as informações(dados) e as operações(o que faz).
+
+3. Abstração: identificação e comportamentos importantes para representar um objeto no software.
+    ->Ex: modelagem de triângulo usa a entidade, dados e operações.
+
+
+*Modelos de Entidades*
+1. Programação Estruturada: uso de estrutura e função no modelo das entidades.
+    Limitações:
+        ->Dados podem ficar inválidos,pois não consegue restringir certos valores.
+        ->Para resolver esse problema, usa-se o encapsulamento.
+
+2. Programação Orientada a Objetos:
+    ->Operações usam métodos
+    ->Armazenamento de informações nos campos ou atributos
+    ->Classes modelam entidades e tem campos e métodos.
+
+3. Referência e Instância:
+    ->Variáveis são alocadas quando uma atribuição com o nome de classe é realizada.
+    -> A variável é chamada de referência.
+    -> A Instância da classe(objeto ) é criada pela instrução.
+    -> A variável não é o próprio objeto e sim uma referência para o objeto criado. 
+->C++ x Python : C++ a variável é a instância e o próprio objeto, armazenando dados nos atributos.
+Python a variável é uma referência para a instância e a variável guarda um endereço de memória.
+2.1.Modelagem/Exemplos em linguagens
+->C++
+class Triangulo {       //Tipo de Variável
+public:
+    double b, h;        //Atributos
+    double calcular_area(){     //Método
+        return b*h / 2;
+    }
+};
+
+int main(){
+    Triangulo x;
+    x.b=10;
+    x.h=20;
+    cout<< x.calcular_area();
+}
+
+->C
+struct Triangulo{       //Tipo de Variável
+    double b,h;     //Campos
+};
+double calcular_area(Triangulo t) {
+    return t.b*t.h /2;
+}
+int main(){
+    Triangulo x;
+    x.b=10;
+    x.h=20;
+    printf("%lf", calcular_area(x));
+}
+
+->Python
+class Triangulo:        #Tipo de Variável
+    def __init__(self):     #uso do __ chamasse de método mágico
+        self.b = 0      #Campo ou atributos
+        self.h = 0
+    def calcular_area(self):
+        return self.b * self.h /2       #Método
+x=Triangulo()
+x.b=10
+x.h=20
+print(x.calcular_area())
+
+Cada pixel da foto tem pelo menos 3 bytes.
+valor RGB: R 0-255, G 0-255 B 0-255
+
+
+Encapsulamento: serve para evitar que o sistemas evite valores indevidos (negativos) 
+    def set_base(self, v):
+        if v>=0: self.__b = v
+        else: raise ValueError
+serve para caso o sistema armazene um valor negativo, ele da erro.
+Set = serve para setar/definir um valor inicial.
+Get= serve para pegar/retornar um valor armazenado.
+raise ValueError= retorna que o valor está errado.
+
+certas operações vão usar apenas o get, pois alguma outra operação vai modificar ou criar o set
+
+Estado: valores guardados em uma variavel.
+comportamento: o que um objeto pode fazer, metodos usados em cada objeto para fazer as operações.
+Identidade: quem é aquele objeto (tipo um print ou type de POO). (objetos de uma mesma classe tem identidades diferentes)
+
+Interface de usuario: classe que executa o programa, onde fica a entrada e saidam assim se comunicando com o sistema/programa
+
+calcular area é um metodo de instancia, usa atibutos que estão armazenados na instancia, ex: variaveis que estão salvas em X.
+
