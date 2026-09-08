@@ -92,3 +92,6 @@ Interface de usuario: classe que executa o programa, onde fica a entrada e saida
 
 calcular area é um metodo de instancia, usa atibutos que estão armazenados na instancia, ex: variaveis que estão salvas em X.
 
+                    **Construtores**
+
+metodos que instanciam um objeto e dão uma referência a ele, são convocados na operação de atribuição, EX: x = 10
