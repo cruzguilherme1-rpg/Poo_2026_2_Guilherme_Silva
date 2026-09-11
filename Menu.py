@@ -10,11 +10,11 @@ class Triangulo:
 
     def set_base(self, v):
         if v >= 0: self.__b = v
-        else: raise ValueError("Base deve ser positiva")    
+        else: raise ValueError("Base deve ser positiva: ")    
 
     def set_altura(self, v):
         if v >= 0: self.__h = v
-        else: raise ValueError("Altura deve ser positiva")
+        else: raise ValueError("Altura deve ser positiva: ")
 
     def get_base(self):
         return self.__b        
@@ -36,11 +36,11 @@ class Retangulo:
 
     def set_base(self, v):
         if v >= 0: self.__b = v
-        else: raise ValueError("Base deve ser positiva")    
+        else: raise ValueError("Base deve ser positiva: ")    
 
     def set_altura(self, v):
         if v >= 0: self.__h = v
-        else: raise ValueError("Altura deve ser positiva")
+        else: raise ValueError("Altura deve ser positiva: ")
 
     def get_base(self):
         return self.__b        
@@ -63,11 +63,11 @@ class Frete:
 
     def set_peso(self, v):
         if v >= 0: self.__peso = v
-        else: raise ValueError("peso deve ser positiva")    
+        else: raise ValueError("peso deve ser positivo: ")    
 
     def set_distancia(self, v):
         if v >= 0: self.__distancia = v
-        else: raise ValueError("distancia deve ser positiva")
+        else: raise ValueError("distancia deve ser positivo: ")
 
     def get_peso(self):
         return self.__peso        
