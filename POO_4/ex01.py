@@ -42,7 +42,7 @@ class Playlist:
     def listar(self):
         return self.__musicas
     def __str__(self):
-        return f"A playlist {self.nome} tem {len(self.__musicas)} musica(s)"
+        return f"A playlist {self.__nome} tem {len(self.__musicas)} musica(s)"
 
 class UI:
     playlist = []
@@ -60,7 +60,7 @@ class UI:
     @staticmethod
     def menu():
         print("1 - inserir playlist, 2 - listar playlist, 3 - inserir musica, 4 - listar musicas, 5 - fim")
-        return int(input("escolha uma opção"))
+        return int(input("escolha uma opção: "))
 
     @classmethod
     def inserir_playlist(cls):
@@ -81,7 +81,7 @@ class UI:
             return
         for i,x in enumerate(cls.playlist):
             print (i, " - ",  x.get_nome())
-        
+
         index = int(input("informe o numero da playlist: "))
         titulo = input("informe o titulo da musica: ")
         artista = input("informe o artista: ")
@@ -90,9 +90,9 @@ class UI:
         cls.playlist[index].inserir(m)
 
     @classmethod
-    def listar_musica():
-        for x in cls.playlist:
-            print("playlist", x.get_nome())
+    def listar_musica(csl):
+        for x in csl.playlist:
+            print("playlist: ", x.get_nome())
             for m in x.listar():
                 print("   ", m)
 
