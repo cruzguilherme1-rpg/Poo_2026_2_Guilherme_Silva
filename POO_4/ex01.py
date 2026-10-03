@@ -1,8 +1,14 @@
 class Musica: 
-    def __init__(self, titulo, artista, album):
+    def __init__(self, id_musica, titulo, artista, album, temp_m):
+        self.set_id(id_musica)
         self.set_titulo(titulo)
         self.set_artista(artista)
         self.set_album(album)
+        self.set_temp_m(temp_m)
+
+    def set_id(self, id_musica):
+        if id_musica <= 0: raise ValueError("id da música deve ser positivo")
+        self.__id_musica = id_musica
 
     def set_titulo(self, titulo):
         if titulo == "": raise ValueError("titulo deve ser informado")
@@ -15,10 +21,16 @@ class Musica:
     def set_album(self, album):
         if album == "": raise ValueError("album deve ser informado")
         self.__album = album
+    
+    def set_temp_m(self, temp_m):
+        if temp_m <= 0: raise ValueError("tempo da música deve ser acima de 0")
+        self.__temp_m = temp_m
 
+    def get_id(self): return self.__id_musica
     def get_titulo(self): return self.__titulo
     def get_artista(self): return self.__artista
     def get_album(self): return self.__album
+    def get_temp_m(self): return self.__temp_m
     def __str__(self):
         return f"{self.__titulo} - `{self.__artista} - {self.__album}"
 
@@ -32,7 +44,6 @@ class Playlist:
         if nome == "": raise ValueError("nome deve ser informado")
         self.__nome = nome
     def set_descricao(self, descricao):
-        #if descricao == "": raise ValueError("descricao deve ser informado")
         self.__descricao = descricao
 
     def get_nome(self): return self.__nome
@@ -43,6 +54,7 @@ class Playlist:
         return self.__musicas
     def __str__(self):
         return f"A playlist {self.__nome} tem {len(self.__musicas)} musica(s)"
+
 
 class UI:
     playlist = []
@@ -64,9 +76,10 @@ class UI:
 
     @classmethod
     def inserir_playlist(cls):
+        id = int(input("informe o id da playlist: "))
         nome = input("informe o nome da playlist: ")
         desc = input("informe a descrição: ")
-        x = Playlist(nome, desc)
+        x = Playlist(id, nome, desc)
         cls.playlist.append(x)
         pass
 
@@ -90,9 +103,9 @@ class UI:
         cls.playlist[index].inserir(m)
 
     @classmethod
-    def listar_musica(csl):
-        for x in csl.playlist:
-            print("playlist: ", x.get_nome())
+    def listar_musica(cls):
+        for x in cls.playlist:
+            print("playlist: ", x.get_nome(), "(ID: ", x.get_id(), ")")
             for m in x.listar():
                 print("   ", m)
 
