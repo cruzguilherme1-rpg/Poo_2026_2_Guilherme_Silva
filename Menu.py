@@ -1,7 +1,5 @@
 class Triangulo:
-    def __init__(self, b, h):  # Construtor
-        #self.__b = 0
-        #self.__h = 0
+    def __init__(self, b, h):
         self.set_base(b)
         self.set_altura(h)
 
@@ -26,9 +24,7 @@ class Triangulo:
         return self.__b * self.__h / 2
 
 class Retangulo:
-    def __init__(self, b, h):  # Construtor
-            #self.__b = 0
-            #self.__h = 0
+    def __init__(self, b, h): 
             self.set_base(b)
             self.set_altura(h)
     def __str__(self):
