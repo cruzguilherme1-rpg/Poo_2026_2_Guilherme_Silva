@@ -225,4 +225,4 @@ class UI:
         else:
             print("Próxima música a ser tocada: Nenhuma (é a última música da playlist até o momento)")
 
-UI.main()
+UI.main()   
