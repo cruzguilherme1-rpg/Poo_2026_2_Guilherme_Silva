@@ -3,7 +3,7 @@ from models.Cliente import Cliente
 
 class ClienteDAO:
     def __init__(self):
-        self.__arquivo = "CLIENTES.json"
+        self.__arquivo = "clientes.json"
         self.__objetos = []
     def inserir(self, obj):
         self.__abrir()
