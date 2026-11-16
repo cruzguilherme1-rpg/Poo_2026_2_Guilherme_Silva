@@ -67,14 +67,16 @@ class UI:
     def main():
         op = 0
         while op != 9:
+            op = UI.menu()
             if op == 1: UI.inserir_atletas()
             if op == 2: UI.listar_atletas()
             if op == 3: UI.inserir_treino()
             if op == 4: UI.listar_treinos()
             if op == 5: UI.atleta_mais_rapido()
 
+    @staticmethod
     def menu():
-        print ("1-Inserir atleta  2-Listar atletas  3-inserir treino  4-listar treino  5-Mais rapido")
+        print ("1-Inserir atleta  2-Listar atletas  3-inserir treino  4-listar treino  5-Mais rapido  9-Fim")
         return int(input("informe uma opção: "))
 
     @classmethod
@@ -94,7 +96,7 @@ class UI:
         cls.listar_atletas()
         id_atleta = int(input("informe o Id do atleta: "))
         data_str = input("informe a data dd/mm/aaaa: ")
-        data = datetime.strftime(data_str, "%d/%m/%Y")
+        data = datetime.strftime(data_str , "%d/%m/%Y")
         distancia = float(input("informe a distancia em km: "))
         tempo_str = input("informe o tempo MM:SS : ")
         min, seg = map(int, tempo_str.split())
@@ -103,6 +105,13 @@ class UI:
         cls.__treinos.append(x)
 
     @classmethod
+    def listar_treinos(cls):
+        for x in cls.__treinos: print(x)
+
+    @classmethod
     def atleta_mais_rapido(cls):
         treino = min(cls.__treinos, key = lambda x : x.pace())
-        for x in cls
+        for x in cls.__atletas:
+            if x.get_id() == treino.get_id_atleta():
+                print(x)
+UI.main()
