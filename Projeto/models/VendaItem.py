@@ -7,7 +7,7 @@ class VendaItem:
         self.set_id_produto(id_produto)
 
     def __str__(self):
-        return f"{self.id} - {self.quantidade} - {self.preco} - {self.id_venda} - {self.id_produto}"
+        return f"ID: {self.__id} - Quantidade: {self.__quantidade} - Preço: {self.__preco} - ID Venda: {self.__id_venda} - ID Produto: {self.__id_produto}"
     
     def set_id(self, id):  
         if id < 0:
