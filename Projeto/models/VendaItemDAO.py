@@ -1,5 +1,5 @@
 import json
-from VendaItem import VendaItem
+from .VendaItem import VendaItem
 
 class VendaItemDAO:
     def __init__(self):

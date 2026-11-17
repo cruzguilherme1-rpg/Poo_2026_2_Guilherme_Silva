@@ -1,6 +1,6 @@
 from datetime import datetime
 import json
-from venda import Venda
+from .venda import Vendas
 
 class VendaDAO:
     def __init__(self):
@@ -38,9 +38,9 @@ class VendaDAO:
         arquivo = open(self.__arquivo, mode="r")
         objetos_json = json.load(arquivo)      
         for obj in objetos_json:               
-            self.__objetos.append(Venda.from_json(obj))
+            self.__objetos.append(Vendas.to_json(obj))
         arquivo.close()
     def __salvar(self):
         arquivo = open(self.__arquivo, mode="w")
-        json.dump(self.__objetos, arquivo, default = Venda.to_json, indent = 2)
+        json.dump(self.__objetos, arquivo, default = Vendas.from_json, indent = 2)
         arquivo.close()

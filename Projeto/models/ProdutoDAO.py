@@ -1,5 +1,5 @@
 import json 
-from produto import Produto
+from .produto import Produto
 
 class ProdutoDAO:
     def __init__(self):

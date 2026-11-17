@@ -1,6 +1,15 @@
 from datetime import datetime
 from services import Service
 
+def parse_data(data_str):
+    formatos = ("%d/%m/%Y %H:%M:%S", "%d %m %Y %H %M %S")
+    for formato in formatos:
+        try:
+            return datetime.strptime(data_str, formato)
+        except ValueError:
+            continue
+    raise ValueError("Formato de data inválido. Use dd/mm/aaaa hh:mm:ss ou dd mm aaaa hh mm ss.")
+
 class UI:
     @staticmethod
     def main():
@@ -52,8 +61,8 @@ class UI:
     @staticmethod
     def inserir_venda():
         id = int(input("informe o id da venda: "))
-        data_str = input("informe a data (dd/mm/aaaa hh:mm:ss): ")
-        data = datetime.strptime(data_str, "%d/%m/%Y %H:%M:%S")
+        data_str = input("informe a data (dd/mm/aaaa hh:mm:ss ou dd mm aaaa hh mm ss): ")
+        data = parse_data(data_str)
         carrinho = input("informe o carrinho (digite Sim ou Não): ")
         if carrinho == "Sim": carrinho = True
         if carrinho == "Não": carrinho = False
@@ -79,8 +88,8 @@ class UI:
     def atualizar_venda():
         UI.listar_vendas()
         id = int(input("informe o id da venda: "))
-        data_str = input("informe a data (dd/mm/aaaa hh:mm:ss): ")
-        data = datetime.strptime(data_str, "%d/%m/%Y %H:%M:%S")
+        data_str = input("informe a data (dd/mm/aaaa hh:mm:ss ou dd mm aaaa hh mm ss): ")
+        data = parse_data(data_str)
         carrinho = input("informe o carrinho (digite Sim ou Não): ")
         if carrinho == "Sim": carrinho = True
         if carrinho == "Não": carrinho = False

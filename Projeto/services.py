@@ -1,17 +1,10 @@
 from datetime import datetime
-
 from models.Cliente import Cliente
 from models.ClienteDAO import ClienteDAO
-
 from models.venda import Vendas
 from models.vendaDAO import VendaDAO
-
-from models.VendaItem import VendaItem
-from models.VendaItemDAO import VendaItemDAO
-
 from models.produto import Produto
 from models.ProdutoDAO import ProdutoDAO
-
 from models.categoria import Categoria
 
 

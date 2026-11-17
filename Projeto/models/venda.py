@@ -1,5 +1,5 @@
 from datetime import datetime
-from VendaItem import VendaItem
+from .VendaItem import VendaItem
 from datetime import datetime
 
 class Vendas:
